@@ -1,0 +1,24 @@
+{
+  "name": "streams",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "buffer": "nodemon buffer",
+    "stream": "nodemon stream"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mariolazzari/node-streams-wdj.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mariolazzari/node-streams-wdj/issues"
+  },
+  "homepage": "https://github.com/mariolazzari/node-streams-wdj#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
