@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "buffer": "nodemon buffer",
-    "stream": "nodemon stream"
+    "buffer": "node --trace_gc buffer",
+    "stream": "node --trace_gc stream"
   },
   "repository": {
     "type": "git",
