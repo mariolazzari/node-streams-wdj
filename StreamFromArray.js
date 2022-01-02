@@ -1,8 +1,14 @@
 const { Readable } = require("stream");
 
 class StreamFromArray extends Readable {
-  constructor(array) {
-    super({ encoding: "utf8" });
+  constructor(array, mode = false) {
+    if (mode) {
+      console.log("MODE:  Object");
+      super({ objectMode: true });
+    } else {
+      console.log("MODE: String");
+      super({ encoding: "utf8" });
+    }
     this.array = array;
     this.index = 0;
   }
@@ -13,10 +19,12 @@ class StreamFromArray extends Readable {
       return;
     }
 
-    const chunk = this.array[this.index];
     // push chunk into stream
+    const chunk = this.mode
+      ? { data: this.array[this.index], index: this.index }
+      : this.array[this.index];
     this.push(chunk);
-    this.index++;
+    this.index += 1;
   }
 }
 

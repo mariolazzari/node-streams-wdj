@@ -8,6 +8,10 @@ const advices = [
   "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta, tempora.",
 ];
 
-const stream = new StreamFromArray(advices);
-stream.on("data", chunk => console.log(chunk));
-stream.on("end", () => console.log("DONE"));
+const stream1 = new StreamFromArray(advices);
+stream1.on("data", chunk => console.log(chunk));
+stream1.on("end", () => console.log("DONE"));
+
+const stream2 = new StreamFromArray(advices, true);
+stream2.on("data", chunk => console.log(chunk));
+stream2.on("end", () => console.log("DONE"));
