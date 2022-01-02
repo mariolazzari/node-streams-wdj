@@ -11,6 +11,7 @@ class StreamFromArray extends Readable {
     }
     this.array = array;
     this.index = 0;
+    this.mode = mode;
   }
 
   _read() {
@@ -23,6 +24,7 @@ class StreamFromArray extends Readable {
     const chunk = this.mode
       ? { data: this.array[this.index], index: this.index }
       : this.array[this.index];
+
     this.push(chunk);
     this.index += 1;
   }
