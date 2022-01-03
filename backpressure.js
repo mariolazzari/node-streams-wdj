@@ -2,7 +2,7 @@ const { createReadStream, createWriteStream } = require("fs");
 
 const readStrean = createReadStream("./video.mp4");
 const writeStream = createWriteStream("./copy.mp4", {
-  highWaterMark: 8192 * 1024 * 1024,
+  highWaterMark: 8192, //* 1024, //* 1024,
 });
 
 readStrean.on("data", chunk => {
