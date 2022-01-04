@@ -21,5 +21,8 @@
   "homepage": "https://github.com/mariolazzari/node-streams-wdj#readme",
   "devDependencies": {
     "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "multiparty": "^4.2.2"
   }
 }
