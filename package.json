@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "buffer": "node --trace_gc buffer",
-    "readable": "node --trace_gc readable",
-    "stream": "node --trace_gc stream"
+    "buffer": "nodemon --trace_gc 01_buffer",
+    "readable": "nodemon --trace_gc readable",
+    "stream": "nodemon --trace_gc stream"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,7 @@
     "nodemon": "^2.0.15"
   },
   "dependencies": {
-    "multiparty": "^4.2.2"
+    "dotenv": "^16.0.0",
+    "multiparty": "^4.2.3"
   }
 }

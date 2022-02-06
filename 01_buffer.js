@@ -1,14 +1,14 @@
 const http = require("http");
 const { readFile } = require("fs");
+const readEnv = require("./utils/readEnv");
 
-const file = "./video.mp4";
-const PORT = 3001;
+const { PORT, FILE } = readEnv;
 
 const app = http.createServer((_req, res) => {
-  readFile(file, (err, data) => {
+  readFile(FILE, (err, data) => {
     if (err) {
       console.error(err);
-      return;
+      return res.end(err.message);
     }
 
     res.writeHead(200, { "Content-Type": "video/mp4" });
